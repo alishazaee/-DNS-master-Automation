@@ -1,0 +1,10 @@
+zone "$domain" {
+type $type;
+file "$file";
+allow-transfer {key "mykey"; };
+};
+
+key "mykey" {
+algorithm HMAC-SHA256;
+secret "$allow";
+};

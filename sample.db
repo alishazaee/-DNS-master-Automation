@@ -1,0 +1,15 @@
+$TTL    100
+$domain       IN      SOA     $domain root.$domain (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+@       IN      NS     $ns
+@       IN      A      $dnsip
+@       IN      AAAA   ::1
+ns1      IN      A      $dnsip
+www     IN      A      $www
+mail    IN      A      $mail
+@	IN      MX  1  mail.$domain
